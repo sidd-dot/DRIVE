@@ -8,7 +8,7 @@ router.get('/register', (req, res) => {
   res.render('register');
 })
 router.post('/register',
-  body('email').trim().isEmail().isLength({ min: 10 }),
+  body('email').trim().isEmail().isLength({ min: 5 }),
   body('password').trim().isLength({ min: 5 }),
   body('username').trim().isLength({ min: 3 }),
   async (req, res) => {
